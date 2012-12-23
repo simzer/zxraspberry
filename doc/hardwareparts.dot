@@ -1,0 +1,13 @@
+graph hardware {
+  node [ shape="box" ];
+  PI [ label="raspberry pi" ];
+  PI -- "speccy keyboard\n(gpio)";
+  HUB1 [ label="usb hub 1" ];
+  PI -- HUB1  
+  HUB1 -- "usb audio input"
+  HUB1 -- "usb io extender\n(expansion bus emulation)"
+  HUB1 -- "usb wifi"
+  HUB1 -- "usb speaker"
+  PI -- "usb hub 2\n(ext)"
+  PI -- "accumulator"
+}
